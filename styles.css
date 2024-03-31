@@ -1,21 +1,44 @@
-.container {  display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.4fr 1.6fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "Header Header Contact"
-      "Education Education Achivement"
-      "experience experience experience";
-  }
-  
-  .Header { grid-area: Header; }
-  
-  .Contact { grid-area: Contact; }
-  
-  .Education { grid-area: Education; }
-  
-  .Achivement { grid-area: Achivement; }
-  
-  .experience { grid-area: experience; }
-  
+body{
+background-color: var(--bs-dark);
+color: #e8f4ff;
+}
+.page {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.4fr 1.6fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Header Header Contact"
+    "Education Education Achivement"
+    "experience experience experience";
+    height: 100vh;
+}
+
+.Header {
+  grid-area: Header;
+  padding-left: 6vw !important;
+
+}
+
+.Contact {
+  grid-area: Contact;
+}
+
+.Education {
+  grid-area: Education;
+  padding-left: 6vw !important;
+
+}
+
+.Achivement {
+  grid-area: Achivement;
+}
+
+.experience {
+  grid-area: experience;
+}
+.marks-chart{
+    height: 14vh;
+    width: 14vw;
+}
