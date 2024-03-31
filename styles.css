@@ -45,3 +45,6 @@ color: #e8f4ff;
 .modal-title{
   color:rgb(30, 30, 30) !important
 }
+.mouse-pointer:hover{
+cursor: pointer;
+}
