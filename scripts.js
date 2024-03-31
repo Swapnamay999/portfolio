@@ -1,7 +1,7 @@
 Chart.register({
     id:'center',
     beforeDraw: function(chart) {
-      if (chart.config.options.elements.center) {
+      if (chart.config.options.elements) {
         // Get ctx from string
         var ctx = chart.ctx;
         var chartInnerRadius=chart._metasets[chart._metasets.length-1].data[0].innerRadius;
@@ -81,6 +81,9 @@ Chart.register({
         //Draw text in center
         ctx.fillText(line, centerX, centerY);
       }
+      else {
+        return true
+      }
     }
   });
 let marks_char = document.getElementById('marks').getContext('2d');
@@ -123,3 +126,34 @@ new Chart(marks_char
         }
     }
 )
+
+
+
+
+
+
+const labels = ['1st Sem','2nd Sem','3rd Sem','4th Sem','5th Sem','6th Sem','7th Sem','8th']
+const data = {
+  labels: labels,
+  datasets: [{
+    label: 'Grade',
+    data: [8.6,8.4,8.0,8.38,8.78,9.11,8.89,9.12],
+    backgroundColor: [
+      'rgba(255, 99, 132, 0.7)',
+    ],
+  }]
+};
+const config = {
+  type: 'bar',
+  data: data,
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  },
+};
+
+gradeCanvas = document.getElementById('grades').getContext('2d')
+new Chart(gradeCanvas,config)

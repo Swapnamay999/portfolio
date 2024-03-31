@@ -42,3 +42,6 @@ color: #e8f4ff;
     height: 14vh;
     width: 14vw;
 }
+.modal-title{
+  color:rgb(30, 30, 30) !important
+}
